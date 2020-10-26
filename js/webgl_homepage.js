@@ -19,12 +19,12 @@ document.body.appendChild( renderer.domElement ).setAttribute("id", "renderer-ca
 
 camera.position.z = 2;
 
+planet.rotation.z = 2;
+
 let render = function () {
 	requestAnimationFrame( render );
 	renderer.render( scene, camera );
-	
-	planet.rotation.x += 2;
-	planet.rotation.y += 2;
+	planet.rotation.y += 0.005;
 };
 
 render();
