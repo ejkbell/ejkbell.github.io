@@ -5,8 +5,7 @@ let camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHe
 
 let genericTexture = new THREE.TextureLoader().load( 'js/textures/colormap.jpg' );
 let planetGeometry = new THREE.SphereGeometry(0.5, 50, 50);
-//let planetMaterial = new THREE.MeshBasicMaterial( { map: genericTexture } );
-let planetMaterial = new THREE.MeshNormalMaterial();
+let planetMaterial = new THREE.MeshBasicMaterial( { map: genericTexture } );
 let planet = new THREE.Mesh(planetGeometry, planetMaterial);
 scene.add(planet);
 
