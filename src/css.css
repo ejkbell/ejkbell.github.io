@@ -1,0 +1,181 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	background-color: rgb(240, 240, 240);
+	overflow-x: hidden;
+}
+#renderer-canvas {
+	display: block;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+}
+.topNav {
+	display: block;
+	width: 100%;
+	height: 100px;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.topNavCenter {
+	display: inline-block;
+	height: auto;
+	width: 1000px;
+	top: 50%;
+	position: relative;
+}
+.prevCatContainer, .nextCatContainer {
+	display: inline-block;
+	height: auto;
+	width: auto;
+	position: absolute;
+	margin-top: 25px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	opacity: 0;
+}
+.prevCatContainer {
+	left: 0;
+	animation: 0.5s ease-in-out 1.5s 1 categoryAnimation;
+	animation-fill-mode: forwards;
+}
+.nextCatContainer {
+	right: 0;
+	animation: 0.5s ease-in-out 1.6s 1 categoryAnimation;
+	animation-fill-mode: forwards;
+}
+.pageArrow {
+	color: black;
+	display: inline;
+	position: absolute;
+	top: 4px;
+}
+.pageArrowLeft {
+	left: 10px;
+	transition: left 0.3s ease-in-out
+}
+.pageArrowRight {
+	right: 10px;
+	transition: right 0.3s ease-in-out
+}
+.prevCatContainer:hover .pageArrowLeft {
+	left: 0;
+	transition: left 0.3s ease-in-out
+}
+.nextCatContainer:hover .pageArrowRight {
+	right: 0;
+	transition: right 0.3s ease-in-out
+}
+.prevCat, .nextCat {
+	margin: 30px;
+	width: auto;
+	height: auto;
+	color: black;
+	display: inline;
+	font-family: 'Quattrocento', serif;
+	font-size: 22px;
+	user-select: none;
+	position: relative;
+}
+@keyframes categoryAnimation {
+	0% {
+		transform: translateY(8px); opacity: 0;
+	}
+	100% {
+		transform: translateY(0px); opacity: 1;
+	}
+}
+.category {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	font-family: 'Quattrocento', serif;
+	font-size: 50px;
+	padding: 0;
+	user-select: none;
+	position: relative;
+	top: 0px;
+	animation: 1.5s ease-in-out 0s 1 categoryAnimation;
+	margin: 0;
+}
+@keyframes topNavBarLoad {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+.topNavBar {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: black;
+	position: relative;
+	margin-top: 10px !important;
+	padding: none;
+	margin: none;
+	border: none;
+	animation: 1.5s ease-in-out 0s 1 topNavBarLoad;
+}
+@keyframes scrollDownLoad {
+	0% {
+		opacity: 0;
+		cursor: default;
+	}
+	100% {
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+.scrollDownContainer {
+	display: block;
+	top: 90%;
+	position: absolute;
+	margin: 0;
+	padding: none;
+	width: 200px;
+	height: auto;
+	opacity: 0;
+	animation: 1.5s ease-in-out 3s 1 scrollDownLoad;
+	animation-fill-mode: forwards;
+}
+.scrollDown {
+	display: block;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 20px;
+	width: 200px;
+	height: auto;
+	text-align: center;
+	margin: 0;
+	top: 0;
+	left: 0;
+	position: relative;
+	user-select: none;
+}
+.scrollDownArrow {
+	display: block;
+	width: auto;
+	height: auto;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	user-select: none;
+	font-size: 30px;
+	transition: margin-top 0.3s ease-in-out
+}
+.scrollDownContainer:hover .scrollDownArrow {
+	margin-top: 20px;
+	transition: margin-top 0.3s ease-in-out
+}
+main {
+	top: 100%;
+	height: 1000px;
+	position: absolute;
+	width: 100%;
+}
