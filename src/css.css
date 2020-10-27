@@ -35,7 +35,7 @@ body {
 	display: inline-block;
 	height: auto;
 	width: auto;
-	position: absolute;
+	position: sticky;
 	margin-top: 25px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -119,7 +119,7 @@ body {
 	width: 100%;
 	height: 3px;
 	background-color: black;
-	position: relative;
+	position: sticky;
 	margin-top: 10px !important;
 	padding: none;
 	margin: none;
