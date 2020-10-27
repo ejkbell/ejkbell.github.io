@@ -4,7 +4,7 @@ var pages = [
 	"My Eportfolio",
 	"History",
 	"English",
-	"Joe Bidenism",
+	"Journalism",
 ]
 
 /*Initialisation*/
