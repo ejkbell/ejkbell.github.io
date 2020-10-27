@@ -22,6 +22,7 @@ planetMaterial.specularMap = new THREE.TextureLoader().load( 'js/textures/specma
 planetMaterial.specular = new THREE.Color('grey');
 let planet = new THREE.Mesh(planetGeometry, planetMaterial);
 scene.add(planet);
+planet.rotation.x = 0.3;
 
 var light = new THREE.PointLight(0xffffff, 1, Infinity);
 camera.add(light);
@@ -30,15 +31,15 @@ scene.add(camera);
 let renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement ).setAttribute("id", "renderer-canvas");
-
 camera.position.z = 2.5;
-
-planet.rotation.x = 0.3;
+var controls = new OrbitControls( camera, renderer.domElement );
+controls.update();
 
 let render = function () {
 	requestAnimationFrame( render );
 	renderer.render( scene, camera );
 	planet.rotation.y += 0.0005;
+	controls.update();
 };
 
 render();
