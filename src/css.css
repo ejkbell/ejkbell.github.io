@@ -204,7 +204,7 @@ main {
 }
 .content-container:before {
     background-color: rgba(240, 240, 240, .15);  
-	backdrop-filter: blur(20px);
+	backdrop-filter: blur(100px);
 }
 .content {
 	font-size: 22px;
