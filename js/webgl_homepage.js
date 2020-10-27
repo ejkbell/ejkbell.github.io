@@ -1,6 +1,6 @@
 //WebGL//
 
-OrbitControls = require('js/orbitcontrols.js');
+//OrbitControls = require('js/orbitcontrols.js');
 
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -34,14 +34,14 @@ let renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement ).setAttribute("id", "renderer-canvas");
 camera.position.z = 2.5;
-var controls = new OrbitControls( camera, renderer.domElement );
-controls.update();
+//var controls = new OrbitControls( camera, renderer.domElement );
+//controls.update();
 
 let render = function () {
 	requestAnimationFrame( render );
 	renderer.render( scene, camera );
 	planet.rotation.y += 0.0005;
-	controls.update();
+	//controls.update();
 };
 
 render();
