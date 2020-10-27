@@ -67,3 +67,11 @@ window.addEventListener('resize', function(event){
     camera.updateProjectionMatrix();
     renderer.setSize( window.innerWidth, window.innerHeight );
 });
+
+//On Scroll//
+window.onscroll = function() {scrollToContent()};
+function scrollToContent() {
+	if (document.documentElement.scrollTop < window.innerHeight) {
+		document.documentElement.scrollTop = window.innerHeight;
+	}
+};
