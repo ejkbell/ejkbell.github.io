@@ -1,10 +1,10 @@
 /*Content*/
 
 var pages = [
-	"My Eportfolio",
-	"History",
-	"English",
-	"Journalism",
+	["My Eportfolio", "Hello and welcome to my eportfolio"],
+	["History", "Hello this is history"],
+	["English", "Hello this is english"],
+	["Journalism", "Hello this is journalism"],
 ]
 
 /*Initialisation*/
@@ -12,15 +12,15 @@ var pages = [
 var page = 0;
 var prevPage = $(pages).length-1;
 var nextPage = 1;
-var pageChangeCheck = 0;
 
 $(".topNavCenter").css({left: (($(".topNav").width()/2)-($(".topNavCenter").width()/2)), right: (($(".topNav").width()/2)-($(".topNavCenter").width()/2))});
 $(".scrollDownContainer").css({left: (($(window).innerWidth()/2)-100), right: (($(window).innerWidth()/2)-100)});
 
 function refreshCategory() {
-	$(document).find(".category").text(pages[page]);
-	$(document).find(".prevCat").text(pages[prevPage]);
-	$(document).find(".nextCat").text(pages[nextPage]);
+	$(document).find(".category").text(pages[page[0]]);
+	$(document).find(".prevCat").text(pages[prevPage][0]);
+	$(document).find(".nextCat").text(pages[nextPage][0]);
+	$(document).find(".content").text(pages[page][1]);
 	$(".category").css({left: (($(".topNavCenter").width()/2)-($(".category").width()/2)), right: (($(".topNavCenter").width()/2)-($(".category").width()/2))});
 };
 refreshCategory();
@@ -55,7 +55,6 @@ function previousPageFunction() {
 		}
 	}
 	refreshCategory();
-	pageChangeCheck ++;
 };
 function nextPageFunction() {
 	var x = $(pages).length-1;
@@ -80,7 +79,6 @@ function nextPageFunction() {
 		}
 	}
 	refreshCategory();
-	pageChangeCheck ++;
 };
 $(".prevCatContainer").click(previousPageFunction);
 $(".nextCatContainer").click(nextPageFunction);
