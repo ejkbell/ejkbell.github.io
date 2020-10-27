@@ -1,7 +1,7 @@
 /*Content*/
 
 var pages = [
-	["My Eportfolio", "This “eportfolio” is a school-prescribed collation of both personal and collaborative work that reflects my individual academic strengths and interests. It additionally contents work produced outside of school that I have deemed of a high enough quality to be publicised – such as my foray into reportative journalism."],
+	["My Eportfolio", "This “eportfolio” is a school-prescribed collation of both personal and collaborative work that reflects my individual academic strengths and interests. It additionally contains work produced outside of school that I have deemed of a high enough quality to be publicised – such as my foray into reportative journalism."],
 	["History", "Hello this is history"],
 	["English", "Hello this is english"],
 	["Journalism", "Hello this is journalism"],
@@ -98,4 +98,10 @@ $(document).keyup(function(e) {
 		default: return;
 	}
 	e.preventDefault();
+});
+
+$(window).scroll(function() {
+	if ($(document).scrollTop() < $(window).innerHeight()) {
+		$(document).scrollTop() = $(window).innerHeight();
+	}
 });
