@@ -56,6 +56,7 @@ window.addEventListener('scroll', () => {
 	const y = (window.scrollY || window.pageYOffset) / vpFraction
 	const [r, g, b] = [red+y, green+y, blue+y].map(Math.round)
 	document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+	document.getElementsByClassName(".topNav").style.backgroundColor = `rgb(${r}, ${g}, ${b})`
 });
 
 //On Resize//
