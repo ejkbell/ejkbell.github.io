@@ -190,7 +190,7 @@ body {
 }
 main {
 	top: 100%;
-	height: initial;
+	height: 100%;
 	position: absolute;
 	width: 100%;
 }
