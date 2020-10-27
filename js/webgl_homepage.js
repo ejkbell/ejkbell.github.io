@@ -30,7 +30,7 @@ let renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement ).setAttribute("id", "renderer-canvas");
 
-camera.position.z = 3;
+camera.position.z = 2.5;
 
 planet.rotation.x = 0.3;
 
