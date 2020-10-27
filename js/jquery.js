@@ -29,6 +29,7 @@ window.onresize = function() {
 	$(".topNavCenter").css({left: (($(".topNav").width()/2)-($(".topNavCenter").width()/2)), right: (($(".topNav").width()/2)-($(".topNavCenter").width()/2))});
 	$(".category").css({left: (($(".topNavCenter").width()/2)-($(".category").width()/2)), right: (($(".topNavCenter").width()/2)-($(".category").width()/2))});
 	$(".scrollDownContainer").css({left: (($(window).innerWidth()/2)-100), right: (($(window).innerWidth()/2)-100)});
+	$(".content-container").css({left: (($(window).width()/2)-(($(".content-container").width()/2)+100)), right: (($(window).width()/2)-(($(".content-container").width()/2)+100))});
 };
 
 /*Body*/
