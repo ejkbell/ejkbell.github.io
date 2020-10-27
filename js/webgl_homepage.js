@@ -69,9 +69,10 @@ window.addEventListener('resize', function(event){
 });
 
 //On Scroll//
-window.onscroll = function() {scrollToContent()};
 function scrollToContent() {
 	if (document.documentElement.scrollTop < window.innerHeight) {
 		document.documentElement.scrollTop = window.innerHeight;
 	}
 };
+window.onscroll = function(){scrollToContent};
+document.getElementsByClassName("scrollDownContainer").onclick = function(){scrollToContent};
