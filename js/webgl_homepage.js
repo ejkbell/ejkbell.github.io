@@ -33,6 +33,7 @@ scene.add(camera);
 let renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement ).setAttribute("id", "renderer-canvas");
+renderer.antialias = true;
 camera.position.z = 2.5;
 //var controls = new OrbitControls( camera, renderer.domElement );
 //controls.update();
