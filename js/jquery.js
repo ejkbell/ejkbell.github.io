@@ -12,6 +12,7 @@ var pages = [
 var page = 0;
 var prevPage = $(pages).length-1;
 var nextPage = 1;
+var pageChangeCheck = 0;
 
 $(".topNavCenter").css({left: (($(".topNav").width()/2)-($(".topNavCenter").width()/2)), right: (($(".topNav").width()/2)-($(".topNavCenter").width()/2))});
 $(".scrollDownContainer").css({left: (($(window).innerWidth()/2)-100), right: (($(window).innerWidth()/2)-100)});
@@ -54,6 +55,7 @@ function previousPageFunction() {
 		}
 	}
 	refreshCategory();
+	pageChangeCheck ++;
 };
 function nextPageFunction() {
 	var x = $(pages).length-1;
@@ -78,6 +80,7 @@ function nextPageFunction() {
 		}
 	}
 	refreshCategory();
+	pageChangeCheck ++;
 };
 $(".prevCatContainer").click(previousPageFunction);
 $(".nextCatContainer").click(nextPageFunction);

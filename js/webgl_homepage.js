@@ -3,9 +3,17 @@
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-let genericTexture = new THREE.TextureLoader().load( 'js/textures/historymap.jpg' );
+let genericTexture = new THREE.TextureLoader().load( 'js/textures/colormap.jpg' );
+let historyTexture = new THREE.TextureLoader().load( 'js/textures/historymap.jpg' );
 let planetGeometry = new THREE.SphereGeometry(0.5, 50, 50);
-let planetMaterial = new THREE.MeshBasicMaterial( { map: genericTexture } );
+if ( pageChangeCheck != 0 ) {
+	if ( page != 1 ) {
+		let planetMaterial = new THREE.MeshBasicMaterial( { map: genericTexture } );
+	}
+	else {
+		let planetMaterial = new THREE.MeshBasicMaterial( { map: historyTexture } );
+	}
+};
 let planetBumpMap = new THREE.TextureLoader().load( 'js/textures/bumpmap.jpg' );
 planetMaterial.displacementMap = planetBumpMap;
 planetMaterial.displacementScale = 50;
