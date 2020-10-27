@@ -17,7 +17,7 @@ $(".topNavCenter").css({left: (($(".topNav").width()/2)-($(".topNavCenter").widt
 $(".scrollDownContainer").css({left: (($(window).innerWidth()/2)-100), right: (($(window).innerWidth()/2)-100)});
 
 function refreshCategory() {
-	$(document).find(".category").text(pages[page[0]]);
+	$(document).find(".category").text(pages[page][0]);
 	$(document).find(".prevCat").text(pages[prevPage][0]);
 	$(document).find(".nextCat").text(pages[nextPage][0]);
 	$(document).find(".content").text(pages[page][1]);
