@@ -70,8 +70,9 @@ window.addEventListener('resize', function(event){
 
 //On Scroll//
 function scrollToContent() {
-	if (document.documentElement.scrollTop < window.innerHeight) {
+	if (document.documentElement.scrollTop < window.innerHeight || document.body.scrollTop < window.innerHeight) {
 		document.documentElement.scrollTop = window.innerHeight;
+		document.body.scrollTop = window.innerHeight;
 	}
 };
 window.onscroll = function(){scrollToContent};
