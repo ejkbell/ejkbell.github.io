@@ -6,14 +6,15 @@ let camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHe
 let genericTexture = new THREE.TextureLoader().load( 'js/textures/colormap.jpg' );
 let historyTexture = new THREE.TextureLoader().load( 'js/textures/historymap.jpg' );
 let planetGeometry = new THREE.SphereGeometry(0.5, 50, 50);
-if ( pageChangeCheck != 0 ) {
-	if ( page != 1 ) {
-		let planetMaterial = new THREE.MeshBasicMaterial( { map: genericTexture } );
-	}
-	else {
-		let planetMaterial = new THREE.MeshBasicMaterial( { map: historyTexture } );
-	}
-};
+let planetMaterial = new THREE.MeshBasicMaterial( { map: genericTexture } );
+//if ( pageChangeCheck != 0 ) {
+//	if ( page != 1 ) {
+//		let planetMaterial = new THREE.MeshBasicMaterial( { map: genericTexture } );
+//	}
+//	else {
+//		let planetMaterial = new THREE.MeshBasicMaterial( { map: historyTexture } );
+//	}
+//};
 let planetBumpMap = new THREE.TextureLoader().load( 'js/textures/bumpmap.jpg' );
 planetMaterial.displacementMap = planetBumpMap;
 planetMaterial.displacementScale = 50;
