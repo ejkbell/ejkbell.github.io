@@ -10,7 +10,6 @@ body {
 	display: block;
 	top: 0;
 	left: 0;
-	position: absolute;
 	z-index: -1;
 	background-attachment: fixed;
 	background-position: center;
