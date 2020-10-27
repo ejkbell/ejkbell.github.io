@@ -6,6 +6,14 @@ body {
 	background-color: rgb(240, 240, 240);
 	overflow-x: hidden;
 }
+@keyframes canvasAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 #renderer-canvas {
 	display: block;
 	top: 0;
@@ -15,6 +23,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	animation: 1.5s ease-in-out 1.5s 1 canvasAnimation;
 }
 .topNav {
 	display: block;
